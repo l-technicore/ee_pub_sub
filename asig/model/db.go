@@ -94,7 +94,7 @@ type Hotel struct {
 
 type Room struct {
 	gorm.Model
-	HotelId string				`gorm:"index";json:"hotel_id"`
+	HotelId string				`gorm:"index" json:"hotel_id"`
 	room_id string				`gorm:"index"`
 	description string						
 	name string								
@@ -104,7 +104,7 @@ type Room struct {
 
 type Rate_plan struct {
 	gorm.Model
-	HotelId string								`gorm:"index";json:"hotel_id"`
+	HotelId string								`gorm:"index" json:"hotel_id"`
 	Rate_planId string							`gorm:"index"`
 	cancellation_policy []cancellation_policy	`gorm:"foreignKey:Rate_planId"`
 	name string												
