@@ -6,7 +6,10 @@
 	go get -v ./...
 	sudo apt install rabbitmq-server
 
-3. Publisher:
+3. Insert the JSON payload in the Json variable in /tmp/ee_pub_sub/src/asig/pub/input/input.go file
+
+
+4. Publisher:
 	main() => /tmp/ee_pub_sub/src/asig/pub/pub.go
 	To run Publisher Execute the following in Bash:
 		cd /tmp/ee_pub_sub/src/asig/pub
@@ -16,7 +19,7 @@
 		"asig/pub/input"
 		"asig/utils"
 
-4. Subscriber:
+5. Subscriber:
 	main() => /tmp/ee_pub_sub/src/asig/sub/sub.go
 	To run Subscriber Execute the following in Bash:
 		cd /tmp/ee_pub_sub/src/asig/sub
@@ -55,13 +58,13 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-5. Local Packages and their _test.go files:
+6. Local Packages and their _test.go files:
 	package sub: "asig/subscriber/subscriber.go" & "asig/subscriber/subscriber_test.go"
 	package pub: "asig/publisher/publisher.go" & "asig/publisher/publisher_test.go"
 	package utils: "asig/utils/logger.go" & "asig/utils/logger_test.go"
 	package model: "asig/model/db.go"
 
-6. To Test the packages Run "go test" on Bash in following directories:
+7. To Test the packages Run "go test" on Bash in following directories:
 	/tmp/ee_pub_sub/src/asig/utils/
 	/tmp/ee_pub_sub/src/asig/subscriber/
 	/tmp/ee_pub_sub/src/asig/publisher/
